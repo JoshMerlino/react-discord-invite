@@ -56,29 +56,21 @@ export default class DiscordInvite extends Component<Props, State | null> {
 		}
 
 		return (
-			<>
-
-				<div className="DiscordInvite-root" style={ style.root }>
-
-					<CStyleSheet scheme={scheme}/>
-
-					<h5 className="DiscordInvite-title" style={ style.title }>You received an invite to a server</h5>
-					<div className="DiscordInvite-body" style={ style.body }>
-
-						<div className="DiscordInvite-serverIcon" style={{ ...style.icon, backgroundImage: `url(${ state.iconURL })` }}/>
-						<div className="DiscordInvite-content">
-							<h3 className="DiscordInvite-serverName DiscordInvite-href" style={ style.name }>{ state.name }</h3>
-							<strong className="DiscordInvite-memberCount" style={ style.memberCount }>
-								<span className="DiscordInvite-badge" style={ style.memberCountDisplay }>{state.memberOnline} Online</span>
-	                   			<span className="DiscordInvite-badge" style={ style.memberCountDisplay }>{state.memberCount} Members</span>
-							</strong>
-						</div>
-						<a className="DiscordInvite-joinLink" href={`https://discord.gg/${state.inviteCodes[0]}`} target="_blank" style={ style.joinLink } rel="noreferrer">Join</a>
-
+			<div className="DiscordInvite-root" style={ style.root }>
+				<CStyleSheet scheme={scheme}/>
+				<h5 className="DiscordInvite-title" style={ style.title }>You received an invite to a server</h5>
+				<div className="DiscordInvite-body" style={ style.body }>
+					<div className="DiscordInvite-serverIcon" style={{ ...style.icon, backgroundImage: `url(${ state.iconURL })` }}/>
+					<div className="DiscordInvite-content">
+						<h3 className="DiscordInvite-serverName DiscordInvite-href" style={ style.name }>{ state.name }</h3>
+						<strong className="DiscordInvite-memberCount" style={ style.memberCount }>
+							<span className="DiscordInvite-badge" style={ style.memberCountDisplay }>{state.memberOnline} Online</span>
+                   			<span className="DiscordInvite-badge" style={ style.memberCountDisplay }>{state.memberCount} Members</span>
+						</strong>
 					</div>
+					<a className="DiscordInvite-joinLink" href={`https://discord.gg/${state.inviteCodes[0]}`} target="_blank" style={ style.joinLink } rel="noreferrer">Join</a>
 				</div>
-
-			</>
+			</div>
 		);
 
 	}

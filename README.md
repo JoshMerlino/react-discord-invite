@@ -1,37 +1,43 @@
-# ts-package
-[![Test CI](https://github.com/JoshMerlino/ts-package/actions/workflows/test.yml/badge.svg)](https://github.com/JoshMerlino/ts-package/actions/workflows/test.yml)
-[![CodeQL](https://github.com/JoshMerlino/ts-package/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/JoshMerlino/ts-package/actions/workflows/codeql-analysis.yml)
+# react-discord-invite
+[![Test CI](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test.yml)
+[![CodeQL](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/codeql-analysis.yml)
 
-## Initial set-up
-The following software is installed:
-* ubuntu-20.04.1lts
-* git-2.25.1
-* node-14.15.4
-* npm-6.14.10
+A React component to invite users to a Discord server with an interactive widget.
 
-### Cloning the source code
+## Using
+
+**Note: *This component fetches data from the Josh O' Bot API. You MUST have [Josh O' Bot](https://discord.com/oauth2/authorize?client_id=748971236276699247&permissions=8&scope=bot) in your server for this to work.***
+
+### Installing
 ```bash
-# Clone the repo
-git clone https://github.com/JoshMerlino/ts-package -o upstream my-package
-
-# Move into working directory
-cd my-package
+npm install -D react-discord-invite
 ```
 
-### Updating the base and merging into existing code
-```bash
-# Fetch
-git fetch
+### Importing
+```javascript
+import DiscordInvite from "react-discord-invite";
 
-# Pull upstream and rebase into master
-git pull upstream --set-upstream master
+function Component() {
+	return (
+		<DiscordInvite/>
+	)
+}
 ```
 
-### Install modules
-```bash
-# Install node build tools
-sudo apt-get install build-essential -y
+### Props
+| Name | Default | Type | Description |
+| - | - | - | - |
+| palette | "dark" | "light" \| "dark" | Sets the color scheme of the component |
+| guild | *required* | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Sets the ID or invite code of the guild. |
 
-# Install node modules
-npm install
+### Examples
+```javascript
+<DiscordInvite palette="light" guild="708050277957238784"/>
 ```
+```javascript
+<DiscordInvite palette="dark" guild="4FBnfPA"/>
+```
+```javascript
+<DiscordInvite guild="4FBnfPA"/>
+```
+

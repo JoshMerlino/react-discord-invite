@@ -11,7 +11,8 @@
         "watch-js": "nodemon .",
         "dev": "concurrently \"npm:watch-*\"",
         "start": "node .",
-        "build": "tsc"
+        "build": "tsc",
+		"prepare": "npm run build"
     },
     "devDependencies": {
         "@types/node": "^15.0.3",
