@@ -41,3 +41,6 @@ function Component() {
 <DiscordInvite guild="4FBnfPA"/>
 ```
 
+### Screenshots
+![Desktop](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/desktop.png)
+![Mobile](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/mobile.png)
