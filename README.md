@@ -42,5 +42,9 @@ function Component() {
 ```
 
 ### Screenshots
-![Desktop](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/desktop.png)
-![Mobile](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/mobile.png)
+![Desktop Dark](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/desktop.dark.png)
+![Desktop Light](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/desktop.light.png)
+
+---
+![Mobile Dark](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/mobile.dark.png)
+![Mobile Light](https://raw.githubusercontent.com/JoshMerlino/react-discord-invite/master/images/mobile.light.png)

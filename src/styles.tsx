@@ -9,17 +9,21 @@ export function colors(palette: "light" | "dark"): Palette {
 	if (palette === "light") return {
 		background: "#f2f3f5",
 		header: "#4f5660",
+		subheader: "#747e8c",
 		name: "#060607",
-		inactive: "#747f8d",
-		active: "#3ba55c"
+		inactive: "#c7ccd0",
+		active: "#5aa363",
+		button: "#85ef92"
 	};
 
 	return {
 		background: "#2f3136",
 		header: "#b9bbbe",
+		subheader: "#b9bbbe",
 		name: "#ffffff",
 		inactive: "#747f8d",
-		active: "#3ba55c"
+		active: "#3ba55c",
+		button: "#3ba55c"
 	};
 
 }
@@ -96,7 +100,7 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 		},
 
 		"memberCount": {
-			color: scheme.header,
+			color: scheme.subheader,
 			flex: "0 1 auto",
 		    whiteSpace: "nowrap",
 		    textOverflow: "ellipsis",
@@ -134,7 +138,7 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 			fontSize: "14px",
 			fontWeight: 500,
 			color: "#fff",
-			backgroundColor: scheme.active,
+			backgroundColor: scheme.button,
 			outline: "none",
 			fontFamily: "Whitney,Helvetica Neue,Helvetica,Arial,sans-serif",
 			textDecoration: "none",
@@ -150,6 +154,11 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 export function CStyleSheet({ scheme }: { scheme: Palette }): JSX.Element {
 	return (
 		<style>{`
+
+			@font-face {
+			  	font-family: "Uni Sans Heavy CAPS";
+			  	src: url(https://cdn.jsdelivr.net/gh/JoshMerlino/photoncss/fonts/UniSansHeavyCaps/3029259ef4f4389d799fe57da6f29158.woff2) format("woff2");
+			}
 
 			.DiscordInvite-href:hover {
 				text-decoration: underline;
