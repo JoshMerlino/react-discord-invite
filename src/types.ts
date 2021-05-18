@@ -22,7 +22,9 @@ export interface State {
 export interface Palette {
 	background: string;
 	header: string;
+	subheader: string;
 	name: string;
 	inactive: string;
 	active: string;
+	button: string;
 }
