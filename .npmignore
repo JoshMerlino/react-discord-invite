@@ -1,5 +1,11 @@
 node_modules/
 src/
-images/
 .env
 *.js.map
+.github/
+images/
+.git/
+.eslint*
+.git*
+README.md
+tsconfig.json
