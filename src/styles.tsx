@@ -2,9 +2,8 @@
 /* eslint no-undef: off */
 
 import React, { CSSProperties } from "react";
-import { Props, Palette } from "./types";
 
-export function colors(palette: "light" | "dark"): Palette {
+export function colors(palette: ColorScheme): Palette {
 
 	if (palette === "light") return {
 		background: "#f2f3f5",
@@ -13,7 +12,7 @@ export function colors(palette: "light" | "dark"): Palette {
 		name: "#060607",
 		inactive: "#c7ccd0",
 		active: "#5aa363",
-		button: "#85ef92"
+		button: "#5aa363"
 	};
 
 	return {
@@ -28,10 +27,10 @@ export function colors(palette: "light" | "dark"): Palette {
 
 }
 
-export function styles(props: Props): { [key: string]: CSSProperties } {
+export function styles({ palette }: { palette: ColorScheme }): Record<string, CSSProperties> {
 
 	// Get color scheme from props
-	const scheme = colors(props.palette);
+	const scheme = colors(palette);
 
 	return {
 
@@ -70,7 +69,8 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 			backgroundClip: "padding-box",
 			backgroundColor: "none",
 			backgroundPosition: "50%",
-			backgroundSize: "100% 100%",
+			backgroundSize: "100% auto",
+			backgroundRepeat: "no-repeat",
 			borderRadius: "15px",
 			height: "50px",
 			width: "50px",
@@ -85,7 +85,7 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 			border: "0px",
 			fontWeight: 600,
 			fontStyle: "inherit",
-			fontFamily: "Whitney, Helvetica Neue, Helvetica, Arial, sans-serif",
+			fontFamily: "Google Sans, Whitney, Helvetica Neue, Helvetica, Arial, sans-serif",
 			fontSize: "14px",
 			verticalAlign: "baseline",
 			whiteSpace: "nowrap",
@@ -136,7 +136,7 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 			userSelect: "none",
 			borderRadius: "3px",
 			fontSize: "14px",
-			fontWeight: 500,
+			fontWeight: 600,
 			color: "#fff",
 			backgroundColor: scheme.button,
 			outline: "none",
@@ -144,8 +144,16 @@ export function styles(props: Props): { [key: string]: CSSProperties } {
 			textDecoration: "none",
 			lineHeight: "38px",
 			verticalAlign: "baseline",
-			transition: "background-color 0.17s ease",
-			position: "relative"
+			position: "relative",
+			cursor: "pointer"
+		},
+
+		"error": {
+			color: "#ed4244"
+		},
+
+		"blurple": {
+			backgroundColor: "#5865f2"
 		}
 
 	};
@@ -160,8 +168,9 @@ export function CStyleSheet({ scheme }: { scheme: Palette }): JSX.Element {
 			  	src: url(https://cdn.jsdelivr.net/gh/JoshMerlino/photoncss/fonts/UniSansHeavyCaps/3029259ef4f4389d799fe57da6f29158.woff2) format("woff2");
 			}
 
-			.DiscordInvite-href:hover {
-				text-decoration: underline;
+			@font-face {
+			  	font-family: 'Google Sans';
+			  	src: url(https://cdn.jsdelivr.net/gh/JoshMerlino/photoncss/fonts/Google_Sans/pxicypQkot1TnFhsFMOfGShd5PSbS2lBkm8.woff2) format('woff2');
 			}
 
 			.DiscordInvite-badge::before {
@@ -176,22 +185,6 @@ export function CStyleSheet({ scheme }: { scheme: Palette }): JSX.Element {
 
 			.DiscordInvite-badge:first-child::before {
 				background-color: ${scheme.active};
-			}
-
-			.DiscordInvite-joinLink::after {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: "";
-			}
-
-			.DiscordInvite-joinLink:hover::after {
-				background: #0002;
-			}
-			.DiscordInvite-joinLink:active::after {
-				background: #0004;
 			}
 
 			@media only screen and (max-width: 600px) {

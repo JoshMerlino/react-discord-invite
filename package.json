@@ -3,7 +3,7 @@
     "version": "1.4.0",
     "description": "A React component to invite users to a Discord server with an interactive widget.",
     "main": "lib/",
-    "typings": "index",
+    "typings": "lib/",
     "author": "Josh Merlino",
     "license": "ISC",
     "scripts": {

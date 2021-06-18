@@ -1,9 +1,11 @@
-export interface Props {
-	palette: "light" | "dark";
-	guild?: string;
+declare type ColorScheme = "light" | "dark";
+
+declare interface Props {
+	palette: ColorScheme;
+	guild: string;
 }
 
-export interface State {
+declare interface APIResponse {
     success: boolean;
 	status?: string;
 	error?: string;
@@ -19,7 +21,7 @@ export interface State {
     inviteCodes: string[];
 }
 
-export interface Palette {
+declare interface Palette {
 	background: string;
 	header: string;
 	subheader: string;
