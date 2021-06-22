@@ -13,7 +13,7 @@ export default class DiscordInvite extends Component<Props, APIResponse | null> 
 		palette: "dark"
 	}
 
-    autoFetch?: NodeJS.Timeout;
+    __mounted = false;
 
     // Initialize component
     constructor(props: Props) {
@@ -35,18 +35,21 @@ export default class DiscordInvite extends Component<Props, APIResponse | null> 
     	// Make API request to my server
     	fetch(`https://joshm.us.to/api/joshobot/v1/guild?guild=${guild}`)
     		.then(resp => resp.json())
-    		.then(newState => this.setState(newState));
+    		.then(newState => this.setState(newState))
+    		.finally(() => {
+    			if (this.__mounted) this.fetchState();
+    		});
 
     }
 
     // On component mount
     componentDidMount(): void {
+    	this.__mounted = true;
     	this.fetchState();
-    	this.autoFetch = setInterval(() => this.fetchState(), 1000);
     }
 
     componentWillUnmount(): void {
-    	clearInterval(this.autoFetch!);
+    	this.__mounted = false;
     }
 
     // Draw element
