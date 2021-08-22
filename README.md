@@ -1,6 +1,8 @@
 # react-discord-invite
-[![Test CI](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test.yml)
-[![CodeQL](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/codeql-analysis.yml)
+### Checks
+* [![Build](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/build.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/build.yml)
+* [![Code Style Analysis](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/code-style-analysis.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/code-style-analysis.yml)
+* [![Test CI](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test-ci.yml/badge.svg)](https://github.com/JoshMerlino/react-discord-invite/actions/workflows/test-ci.yml)
 
 A React component to invite users to a Discord server with an interactive widget.
 
