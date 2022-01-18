@@ -37,7 +37,9 @@ export default class DiscordInvite extends Component<Props, APIResponse | null> 
     		.then(resp => resp.json())
     		.then(newState => this.setState(newState))
     		.finally(() => {
-    			if (this.__mounted) this.fetchState();
+    			if (this.__mounted) {
+					setTimeout(() => this.fetchState(), 5000);
+				}
     		});
 
     }
