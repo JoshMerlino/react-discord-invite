@@ -33,7 +33,7 @@ export default class DiscordInvite extends Component<Props, APIResponse | null> 
     	const { guild } = this.props;
 
     	// Make API request to my server
-    	fetch(`https://joshmerlino.me/api/joshobot/v1/guild?guild=${guild}`)
+    	fetch(`https://api.joshmerlino.me/v1/joshobot/guild?guild=${guild}`)
     		.then(resp => resp.json())
     		.then(newState => this.setState(newState))
     		.finally(() => {
