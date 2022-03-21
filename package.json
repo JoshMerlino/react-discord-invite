@@ -1,6 +1,5 @@
 {
 	"name": "react-discord-invite",
-	"private": true,
 	"version": "4.0.0",
 	"description": "A React component to invite users to a Discord server with an interactive widget.",
 	"types": ".",
