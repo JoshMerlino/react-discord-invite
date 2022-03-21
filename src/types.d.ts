@@ -1,4 +1,4 @@
-declare interface Props {
+interface Props {
 
     /*
      * The ID or invite code of the server.
@@ -7,17 +7,17 @@ declare interface Props {
 
     /*
      * The color theme of the component.
-    */
+     */
     palette?: "light" | "dark";
 
     /*
      * Weather or not the component should skip rendering a shadow.
-    */
+     */
     flat?: boolean;
 
 }
 
-declare interface ServerStat {
+interface ServerStat {
     id: string;
     name: string;
     owner: string;
