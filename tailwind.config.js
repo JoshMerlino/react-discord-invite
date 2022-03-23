@@ -17,6 +17,9 @@ module.exports = {
 					"700": "#2a3aee"
 				}
 			}
+		},
+		screens: {
+			md: "500px"
 		}
 	}
 };

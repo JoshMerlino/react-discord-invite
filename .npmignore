@@ -3,3 +3,5 @@ src/
 *config*
 node_modules/
 package-lock.json
+*.html
+index.tsx

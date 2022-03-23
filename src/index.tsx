@@ -42,7 +42,7 @@ export default function DiscordInvite({ guild, palette = "dark", flat = false }:
 
 	if (state && "error" in state && state.error) return (
 		<div className={ classnames("ReactDiscordInvite--root", `palette-${palette}`, { flat }) }>
-			<h5 className="ReactDiscordInvite--title">You've been invited to join a server</h5>
+			<h5 className="ReactDiscordInvite--title !text-red-500">You've been invited to join a server</h5>
 			<div className="ReactDiscordInvite--datalayer">
 				<img className="ReactDiscordInvite--servericon" src={initialState.iconURL!}/>
 				<div className="ReactDiscordInvite--textlayer">

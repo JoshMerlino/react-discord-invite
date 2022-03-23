@@ -20,19 +20,6 @@ declare module "react-discord-invite" {
 
     }
 
-    interface ServerStat {
-        id: string;
-        name: string;
-        owner: string;
-        ownerId: string;
-        verified: boolean;
-        memberCount: number | string;
-        memberOnline: number | string;
-        bannerURL: string | null;
-        iconURL: string | null;
-        inviteCodes: string[];
-    }
-
     export default class DiscordInvite extends React.Component<Props> { }
 
 }
